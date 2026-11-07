@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Reel Studio</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+    padding: 25px;
+      background: #101322;
+        color: white;
+          font-family: Arial, sans-serif;
+          }
+          h1 { color: #38e6bd; }
+          .panel {
+            max-width: 600px;
+              margin: auto;
+                background: #20283a;
+                  padding: 22px;
+                    border-radius: 16px;
+                    }
+                    input, select, button {
+                      width: 100%;
+                        padding: 14px;
+                          margin: 10px 0;
+                            border-radius: 10px;
+                              border: none;
+                                font-size: 16px;
+                                }
+                                button {
+                                  background: #38e6bd;
+                                    font-weight: bold;
+                                    }
+                                    #output {
+                                      white-space: pre-wrap;
+                                        background: #101322;
+                                          padding: 15px;
+                                            border-radius: 10px;
+                                              line-height: 1.6;
+                                              }
+                                              </style>
+                                              </head>
+                                              <body>
+                                              <div class="panel">
+                                              <h1>🎬 AI Reel Studio</h1>
+                                              <p>Create your next Instagram Reel.</p>
+
+                                              <input id="topic" placeholder="Enter your video topic">
+
+                                              <select id="style">
+                                              <option>Funny</option>
+                                              <option>Horror</option>
+                                              <option>Motivational</option>
+                                              <option>Animal Stories</option>
+                                              <option>Gaming</option>
+                                              </select>
+
+                                              <button onclick="generate()">Generate Reel Plan</button>
+
+                                              <h3>Your Reel Plan</h3>
+                                              <div id="output">Your result will appear here.</div>
+                                              </div>
+
+                                              <script>
+                                              function generate() {
+                                               const topic = document.getElementById("topic").value.trim();
+                                                const style = document.getElementById("style").value;
+
+                                                 if (!topic) {
+                                                    alert("Please enter a topic!");
+                                                       return;
+                                                        }
+
+                                                         document.getElementById("output").textContent =
+                                                          `TOPIC: ${topic}
+
+                                                          STYLE: ${style}
+
+                                                          HOOK:
+                                                          Create a powerful opening in the first 3 seconds.
+
+                                                          SCRIPT:
+                                                          Write an engaging Hindi script about ${topic}.
+
+                                                          SCENES:
+                                                          Scene 1: Strong visual introduction.
+                                                          Scene 2: Main story.
+                                                          Scene 3: Surprising ending.
+
+                                                          VOICEOVER:
+                                                          Prepare Hindi narration.
+
+                                                          CAPTIONS:
+                                                          Create short, engaging captions.
+
+                                                          FORMAT: 9:16 Vertical
+                                                          PLATFORM: Instagram Reels / YouTube Shorts`;
+                                                          }
+                                                          const API_URL = "https://glowing-guacamole-wv4gvw747pqpf5pgg-3000.app.github.dev";
+                                                          </script>
+                                                          </body>
+                                                          </html>
+                                                          
